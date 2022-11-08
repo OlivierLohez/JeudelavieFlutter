@@ -57,14 +57,10 @@ class JDLV {
 
   //permet de changer de couleur
   void changementdecouleur(x, y) {
-    for (var y = 0; y < tab.length; y++) {
-      for (var x = 0; x < tab.length; x++) {
-        if (tab[x][y] == Colors.red) {
-          tab[x][y] = Colors.black;
-        } else {
-          tab[x][y] = Colors.red;
-        }
-      }
+    if (tab[x][y] == Colors.red) {
+      tab[x][y] = Colors.blue;
+    } else {
+      tab[x][y] = Colors.red;
     }
   }
 }

@@ -140,7 +140,7 @@ class Jeudelavie2 extends State<Jeudelavietest> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("For Loop in Widget Children"),
+        title: Text("Jeu de la vie"),
         backgroundColor: Colors.redAccent,
       ),
       body: Container(
@@ -153,7 +153,7 @@ class Jeudelavie2 extends State<Jeudelavietest> {
                 for (int x = 0; x <= 9; x++) ...[
                   Expanded(
                     child: TextButton(
-                      onPressed: changementdecouleur,
+                      onPressed: () => jdlv.changementdecouleur(x, y),
                       child: Text(
                         '',
                         style: TextStyle(
@@ -177,7 +177,7 @@ class Jeudelavie2 extends State<Jeudelavietest> {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
-          onPressed: restart, label: const Text('Reinitialisation')),
+          onPressed: jdlv.restart, label: const Text('Reinitialisation')),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
